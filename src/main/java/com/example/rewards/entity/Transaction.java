@@ -1,8 +1,7 @@
 package com.example.rewards.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
-
-import javax.persistence.*;
 import java.time.LocalDate;
 
 @Data
@@ -15,6 +14,6 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long customerId;
-    private double amount;
-    private LocalDate date;
+    private Double transactionAmount;
+    private LocalDate transactionDate;
 }
